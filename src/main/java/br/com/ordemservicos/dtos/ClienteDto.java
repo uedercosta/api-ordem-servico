@@ -1,6 +1,7 @@
 package br.com.ordemservicos.dtos;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -20,6 +21,9 @@ public class ClienteDto {
 	private String nome;
 	private boolean ativo;
 	private String cpf;
+
+	@JsonFormat(pattern = "dd/MM/yyyy")
+	private LocalDateTime dataCadastro;
 
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataNascimento;

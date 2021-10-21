@@ -1,7 +1,6 @@
 package br.com.ordemservicos.models;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,9 +32,6 @@ public class Cliente {
 
 	private boolean ativo = true;
 	
-	@JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-	private LocalDateTime dataCadastro = LocalDateTime.now();
-	
 	@Column(length = 11, nullable = false)
 	private String cpf;
 
@@ -43,7 +39,5 @@ public class Cliente {
 	private LocalDate dataNascimento;
 	
 	private String observacoes;
-	
-	
 
 }
